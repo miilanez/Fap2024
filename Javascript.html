@@ -7,6 +7,17 @@ function GetUserData()
 {
     
 }
+
+function botao2()
+{
+    let listaPeso = []
+    for (let i = 0; i < 4; i++) {
+        let peso = Number(prompt("Informe o "+ (i + 1) +" peso"));
+        listaPeso.push(peso)
+    }
+//console.log(listaPeso)
+
+
 function botao1()
 {
 alert("Informe 4 notas:");
@@ -16,12 +27,17 @@ let nota3 = prompt("Digite a terceira nota: ")
 let nota4 = prompt("Digite a quarta nota: ")
 
 // console.log(nota1, nota2, nota3, nota4)
+
 }
 </script>
 </head>
 <body>
 
+
+<input type="button" onclick="botao2()" value="Informar pesos" />
+
 <input type="button" onclick="botao1()" value="Informar Notas" />
+
 
 </body>
 </html></div>

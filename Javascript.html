@@ -7,16 +7,21 @@ function GetUserData()
 {
     
 }
-function funcao1()
+function botao2()
 {
-alert("Eu sou um alerta de tela!");
-console.log("eu sou um alerta de console!")
+    let listaPeso = []
+    for (let i = 0; i < 4; i++) {
+        let peso = Number(prompt("Informe o "+ (i + 1) +" peso"));
+        listaPeso.push(peso)
+    }
+console.log(listaPeso)
+
 }
 </script>
 </head>
 <body>
 
-<input type="button" onclick="funcao1()" value="Exibir Alert" />
+<input type="button" onclick="botao2()" value="Exibir Alert" />
 
 </body>
 </html></div>

@@ -3,37 +3,47 @@
 <head>
 <title>Tutorial de Alert em JavaScript - Linha de Código</title>
 <script>
-
-function botao2()
-{
+    let listaNota = []
     let listaPeso = []
+function botao1(){
+    alert("Informe 4 notas:");
+ 
+    for (let i = 0; i < 4; i++) {
+        let peso = Number(prompt("Informe a "+ (i + 1) +" nota"));
+        listaNota.push(peso)
+        console.log(listaNota)
+    }
+}
+function botao2(){
+    alert("Informe 4 pesos:");
+    
     for (let i = 0; i < 4; i++) {
         let peso = Number(prompt("Informe o "+ (i + 1) +" peso"));
         listaPeso.push(peso)
     }
 }
-//console.log(listaPeso)
-
-
-function botao1()
-{
-alert("Informe 4 notas:");
-let nota1 = prompt("Digite a primeira nota: ")
-let nota2 = prompt("Digite a segunda nota: ")
-let nota3 = prompt("Digite a terceira nota: ")
-let nota4 = prompt("Digite a quarta nota: ")
-
-// console.log(nota1, nota2, nota3, nota4)
-
+function botao3(){
+    let multi=[]
+    let somaPeso = 0
+    let somaMulti = 0
+    for(i = 0; i < 4; i++){
+        multi[i] = listaNota[i] * listaPeso[i]
+        somaMulti += multi[i]
+        somaPeso += listaPeso[i]
+    }
+    console.log(somaMulti, somaPeso)
+    let result = somaMulti/somaPeso
+    console.log(result)
+    alert(result)
 }
+
 </script>
 </head>
 <body>
 
-
-<input type="button" onclick="botao2()" value="Informar pesos" />
-
 <input type="button" onclick="botao1()" value="Informar Notas" />
+<input type="button" onclick="botao2()" value="Informar pesos" />
+<input type="button" onclick="botao3()" value="calcular" />
 
 
 </body>

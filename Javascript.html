@@ -7,18 +7,26 @@
     let listaPeso = []
 function botao1(){
     alert("Informe 4 notas:");
- 
     for (let i = 0; i < 4; i++) {
-        let peso = Number(prompt("Informe a "+ (i + 1) +" nota"));
-        listaNota.push(peso)
+        let nota = Number(prompt("Informe a "+ (i + 1) +" nota"));
+        if(!nota){
+            alert("Nota não informada, tente novamente")
+            listaNota = []
+            return
+        }
+        listaNota.push(nota)
         console.log(listaNota)
     }
 }
 function botao2(){
     alert("Informe 4 pesos:");
-    
     for (let i = 0; i < 4; i++) {
         let peso = Number(prompt("Informe o "+ (i + 1) +" peso"));
+        if(!peso){
+            alert("Peso não informado, tente novamente")
+            listaPeso = []
+            return
+        }
         listaPeso.push(peso)
     }
 }
@@ -34,7 +42,7 @@ function botao3(){
     console.log(somaMulti, somaPeso)
     let result = somaMulti/somaPeso
     console.log(result)
-    alert(result)
+    alert("o calculo da média ponderada é: " + result)
 }
 
 </script>
